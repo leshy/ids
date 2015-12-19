@@ -22,8 +22,6 @@ env =
 ribcage.init env, ->
   env.log "init", {}, "init"
 
-
-        
   env.server = new lwebServer.nssocketServer do
     port: env.settings.port
     name: 'ids'
@@ -33,6 +31,5 @@ ribcage.init env, ->
     env.log 'server down' {}, 'error'
     process.exit 1
 
-  env.server.subscribe true, (msg) ->
-    console.log "GOT", msg
+  env.server.subscribe true, (msg) -> true
 

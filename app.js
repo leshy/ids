@@ -31,7 +31,7 @@
       return process.exit(1);
     });
     return env.server.subscribe(true, function(msg){
-      return console.log("GOT", msg);
+      return true;
     });
   });
 }).call(this);
